@@ -43,23 +43,23 @@ export default function AdminPanel() {
 
   if (!isLoggedIn) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-neutral-950 p-6">
-        <div className="bg-neutral-900 p-8 rounded-2xl w-full max-w-md border border-white/10 shadow-2xl">
+      <div className="min-h-screen flex items-center justify-center bg-slate-50 p-6">
+        <div className="bg-white p-8 rounded-2xl w-full max-w-md border border-slate-200 shadow-xl">
           <div className="flex justify-center mb-6">
-            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-neutral-950 font-display font-bold text-3xl">3B</div>
+            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-white font-display font-bold text-3xl shadow-md">3B</div>
           </div>
-          <h1 className="text-2xl text-white font-bold text-center mb-6">Yönetim Paneli</h1>
+          <h1 className="text-2xl text-slate-900 font-bold text-center mb-6">Yönetim Paneli</h1>
           <input
             type="password"
             placeholder="Şifre"
-            className="w-full p-4 rounded-xl bg-neutral-950 border border-white/10 text-white mb-4 focus:outline-none focus:border-amber-500 transition-colors"
+            className="w-full p-4 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 mb-4 focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && setIsLoggedIn(true)}
           />
           <button
             onClick={() => setIsLoggedIn(true)}
-            className="w-full py-4 bg-amber-500 hover:bg-amber-600 text-neutral-950 font-bold rounded-xl transition-all"
+            className="w-full py-4 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-xl transition-all shadow-md hover:shadow-lg"
           >
             Giriş Yap
           </button>
@@ -69,56 +69,56 @@ export default function AdminPanel() {
   }
 
   return (
-    <div className="min-h-screen bg-neutral-950 p-6 md:p-12 text-white">
+    <div className="min-h-screen bg-slate-50 p-6 md:p-12 text-slate-900">
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-between items-center mb-10">
           <h1 className="text-3xl font-display font-bold">İçerik Yönetimi</h1>
           <button 
             onClick={handleSave} 
             disabled={loading}
-            className="px-6 py-3 bg-amber-500 hover:bg-amber-600 disabled:opacity-50 text-neutral-950 font-bold rounded-xl transition-all"
+            className="px-6 py-3 bg-amber-500 hover:bg-amber-600 disabled:opacity-50 text-white font-bold rounded-xl transition-all shadow-sm"
           >
             {loading ? "Kaydediliyor..." : "Değişiklikleri Kaydet (Siteyi Güncelle)"}
           </button>
         </div>
         
         {message && (
-          <div className={`p-4 rounded-xl mb-8 border ${message.includes('Hata') ? 'bg-red-500/10 border-red-500/50 text-red-400' : 'bg-green-500/10 border-green-500/50 text-green-400'}`}>
+          <div className={`p-4 rounded-xl mb-8 border ${message.includes('Hata') ? 'bg-red-50 border-red-200 text-red-600' : 'bg-green-50 border-green-200 text-green-600'}`}>
             {message}
           </div>
         )}
 
         <div className="space-y-8">
           {/* Hero Section Edit */}
-          <div className="bg-neutral-900 p-6 rounded-2xl border border-white/5">
-            <h2 className="text-xl font-bold mb-4 text-amber-400">Ana Sayfa Başlıkları</h2>
+          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+            <h2 className="text-xl font-bold mb-4 text-amber-500">Ana Sayfa Başlıkları</h2>
             <div className="space-y-4">
               <div>
-                <label className="block text-sm text-neutral-400 mb-2">Büyük Başlık</label>
+                <label className="block text-sm text-slate-500 mb-2 font-bold">Büyük Başlık</label>
                 <input 
                   type="text" 
                   value={data.heroTitle}
                   onChange={(e) => setData({...data, heroTitle: e.target.value})}
-                  className="w-full p-3 rounded-xl bg-neutral-950 border border-white/10 text-white focus:outline-none focus:border-amber-500"
+                  className="w-full p-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20"
                 />
               </div>
               <div>
-                <label className="block text-sm text-neutral-400 mb-2">Alt Başlık (Açıklama)</label>
+                <label className="block text-sm text-slate-500 mb-2 font-bold">Alt Başlık (Açıklama)</label>
                 <textarea 
                   value={data.heroSubtitle}
                   onChange={(e) => setData({...data, heroSubtitle: e.target.value})}
-                  className="w-full p-3 rounded-xl bg-neutral-950 border border-white/10 text-white focus:outline-none focus:border-amber-500 h-24"
+                  className="w-full p-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 h-24"
                 />
               </div>
             </div>
           </div>
 
           {/* Services Edit */}
-          <div className="bg-neutral-900 p-6 rounded-2xl border border-white/5">
-            <h2 className="text-xl font-bold mb-4 text-amber-400">Hizmetlerimiz</h2>
+          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+            <h2 className="text-xl font-bold mb-4 text-amber-500">Hizmetlerimiz</h2>
             <div className="space-y-6">
               {data.services.map((service, index) => (
-                <div key={index} className="p-4 bg-neutral-950 rounded-xl border border-white/5">
+                <div key={index} className="p-4 bg-slate-50 rounded-xl border border-slate-200">
                   <input 
                     type="text" 
                     value={service.title}
@@ -127,7 +127,7 @@ export default function AdminPanel() {
                       newServices[index].title = e.target.value;
                       setData({...data, services: newServices});
                     }}
-                    className="w-full p-2 mb-3 rounded-lg bg-transparent border-b border-white/10 text-white font-bold focus:outline-none focus:border-amber-500"
+                    className="w-full p-2 mb-3 rounded-lg bg-transparent border-b border-slate-300 text-slate-900 font-bold focus:outline-none focus:border-amber-500"
                   />
                   <textarea 
                     value={service.desc}
@@ -136,7 +136,7 @@ export default function AdminPanel() {
                       newServices[index].desc = e.target.value;
                       setData({...data, services: newServices});
                     }}
-                    className="w-full p-2 rounded-lg bg-transparent border border-white/10 text-neutral-300 focus:outline-none focus:border-amber-500 h-20"
+                    className="w-full p-2 rounded-lg bg-transparent border border-slate-200 text-slate-600 focus:outline-none focus:border-amber-500 h-20"
                   />
                 </div>
               ))}

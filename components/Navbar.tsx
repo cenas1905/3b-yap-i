@@ -25,14 +25,14 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-neutral-950/90 backdrop-blur-md border-b border-white/5 py-4" : "bg-transparent py-6"
+        isScrolled ? "bg-white/90 backdrop-blur-md border-b border-slate-200 py-4 shadow-sm" : "bg-transparent py-6"
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
           <img src="/logo.png" alt="3B Yapı" className="h-10 w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform" />
-          <span className="font-display font-bold text-2xl tracking-wide text-white">3B YAPI</span>
+          <span className={`font-display font-bold text-2xl tracking-wide ${isScrolled ? 'text-slate-900' : 'text-slate-900 drop-shadow-md'}`}>3B YAPI</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -41,14 +41,14 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-sm uppercase tracking-wider font-medium text-neutral-300 hover:text-amber-400 transition-colors"
+              className={`text-sm uppercase tracking-wider font-bold transition-colors ${isScrolled ? 'text-slate-600 hover:text-amber-500' : 'text-slate-800 hover:text-amber-600 drop-shadow-sm'}`}
             >
               {link.name}
             </Link>
           ))}
           <a
             href="tel:+905555555555"
-            className="px-6 py-2.5 bg-white/10 hover:bg-white/20 border border-white/20 text-white rounded-full text-sm font-semibold transition-all hover:scale-105"
+            className="px-6 py-2.5 bg-amber-500 hover:bg-amber-600 text-white rounded-full text-sm font-bold transition-all hover:scale-105 shadow-md"
           >
             Bizi Arayın
           </a>
@@ -56,7 +56,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-white p-2"
+          className={`md:hidden p-2 ${isScrolled ? 'text-slate-900' : 'text-slate-900'}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -65,12 +65,12 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-full left-0 right-0 bg-neutral-950/95 backdrop-blur-lg border-b border-white/10 py-6 px-6 flex flex-col gap-6 md:hidden">
+        <div className="absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg border-b border-slate-200 py-6 px-6 flex flex-col gap-6 md:hidden shadow-xl">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="text-lg font-medium text-white hover:text-amber-400"
+              className="text-lg font-bold text-slate-800 hover:text-amber-500"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}
