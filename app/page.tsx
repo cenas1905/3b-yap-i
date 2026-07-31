@@ -26,51 +26,57 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-50">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900">
           <motion.div 
             initial={{ scale: 1.1, opacity: 0 }}
-            animate={{ scale: 1, opacity: 0.15 }}
+            animate={{ scale: 1, opacity: 0.4 }}
             transition={{ duration: 1.5, ease: "easeOut" }}
             className="absolute inset-0 bg-[url('/w5.jpg')] bg-cover bg-center bg-no-repeat"
           ></motion.div>
-          {/* Refreshing Glassmorphism Gradients */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-50/90 via-slate-50/80 to-blue-100/90 backdrop-blur-[2px]"></div>
+          {/* Deep Premium Gradients */}
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-slate-900/60 to-blue-900/80 backdrop-blur-sm"></div>
           
           <div className="relative z-10 container mx-auto px-6 text-center max-w-5xl pt-32">
             <motion.div 
-              initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }}
-              className="inline-block mb-6 px-6 py-2 rounded-full bg-white/60 backdrop-blur-md border border-blue-200 shadow-sm text-blue-600 font-bold tracking-widest uppercase text-sm"
+              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}
+              className="inline-flex items-center gap-2 mb-8 px-6 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-2xl text-blue-100 font-bold tracking-widest uppercase text-sm"
             >
+              <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
               Lüks ve Zarafet
             </motion.div>
+            
             <motion.h1 
               initial="hidden" animate="visible" variants={fadeInUp}
-              className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-slate-800 mb-8 drop-shadow-sm leading-tight"
+              className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-8 drop-shadow-2xl leading-[1.1]"
             >
               {siteData.heroTitle.split(' ').slice(0, -2).join(' ')} <br /> 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 drop-shadow-sm">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-200">
                 {siteData.heroTitle.split(' ').slice(-2).join(' ')}
               </span>
             </motion.h1>
+            
             <motion.p 
               initial="hidden" animate="visible" variants={fadeInUp} transition={{ delay: 0.2 }}
-              className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto font-medium leading-relaxed"
+              className="text-lg md:text-2xl text-blue-50/80 mb-12 max-w-3xl mx-auto font-light leading-relaxed tracking-wide"
             >
               {siteData.heroSubtitle}
             </motion.p>
-            
+
             <motion.div 
               initial="hidden" animate="visible" variants={fadeInUp} transition={{ delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
             >
-              <a href="#koleksiyon" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-cyan-500 hover:to-blue-400 text-white font-bold rounded-full transition-all shadow-lg hover:shadow-blue-500/30 hover:scale-105">
+              <a href="#koleksiyon" className="px-10 py-5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-full transition-all shadow-[0_0_40px_rgb(37,99,235,0.4)] hover:shadow-[0_0_60px_rgb(37,99,235,0.6)] hover:scale-105 text-lg tracking-wide border border-blue-400/50">
                 Koleksiyonu İnceleyin
               </a>
-              <a href="tel:05442201740" className="px-8 py-4 bg-white hover:bg-slate-100 border border-blue-200 text-slate-700 font-bold rounded-full transition-all hover:scale-105 shadow-sm flex items-center gap-2">
-                <span>0544 220 17 40</span>
+              <a href="#projeler" className="px-10 py-5 bg-transparent hover:bg-white/10 border-2 border-white/30 text-white font-bold rounded-full transition-all hover:scale-105 shadow-sm text-lg tracking-wide backdrop-blur-sm">
+                Projelerimizi Görün
               </a>
             </motion.div>
           </div>
+          
+          {/* Decorative bottom fade */}
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
         </section>
 
         {/* Features / Services Grid */}
