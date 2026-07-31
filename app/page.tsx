@@ -165,6 +165,35 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
+
+        {/* Photo Gallery */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-6">
+            <motion.div 
+              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
+              className="text-center max-w-3xl mx-auto mb-16"
+            >
+              <h2 className="font-display text-4xl font-bold mb-4 text-slate-900">Diğer Uygulamalarımız</h2>
+              <p className="text-slate-600 text-lg">Özel tasarım ayna, dekorasyon ve detay işçiliklerimiz.</p>
+            </motion.div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              {["/g1.jpg", "/g2.png", "/g3.jpg", "/g4.jpg", "/g5.jpg"].map((img, idx) => (
+                <motion.div 
+                  key={idx}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                  className="aspect-square rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer"
+                >
+                  <img src={img} alt="Galeri Görseli" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
       </main>
       <Footer />
     </>
