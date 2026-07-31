@@ -40,20 +40,23 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div className="md:col-span-2">
+          <div id="iletisim" className="md:col-span-2">
             <h4 className="text-slate-900 font-bold mb-6 tracking-wider uppercase text-sm">İletişim</h4>
             <ul className="flex flex-col gap-4">
-              <li className="flex items-start gap-4 text-slate-600 text-sm">
-                <MapPin size={20} className="text-blue-600 shrink-0" />
-                <span>Örnek Mahallesi, Yapı Caddesi No: 123, Merkez / Şehir</span>
+              <li className="flex items-start gap-4 text-slate-600 text-sm hover:text-amber-600 transition-colors">
+                <MapPin size={20} className="text-amber-600 shrink-0" />
+                <a href="https://maps.app.goo.gl/VNyy2MhTDFz9oQJW6" target="_blank" rel="noopener noreferrer">
+                  Konum için tıklayınız (Haritalarda Aç)
+                </a>
               </li>
               <li className="flex items-center gap-4 text-slate-600 text-sm">
-                <Phone size={20} className="text-blue-600 shrink-0" />
-                <a href="tel:+905555555555" className="hover:text-blue-600 transition-colors">+90 555 555 55 55</a>
+                <Phone size={20} className="text-amber-600 shrink-0" />
+                <a href="tel:05442201740" className="hover:text-amber-600 transition-colors">0544 220 17 40</a>
               </li>
               <li className="flex items-center gap-4 text-slate-600 text-sm">
-                <Mail size={20} className="text-blue-600 shrink-0" />
-                <a href="mailto:info@3byapi.com" className="hover:text-blue-600 transition-colors">info@3byapi.com</a>
+                <a href="https://www.instagram.com/winsa3byapi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="hover:text-amber-600 transition-colors font-bold underline">
+                  Instagram Adresimiz
+                </a>
               </li>
             </ul>
           </div>
