@@ -127,7 +127,7 @@ export default function Home() {
             </motion.div>
 
             <div 
-              className="grid grid-cols-1 md:grid-cols-2 gap-8"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
             >
               {[
                 { title: "Lüks Cam Balkon Sistemleri", desc: "Isıcamlı, katlanır ve sürme seriler ile dört mevsim konfor.", img: "/w1.jpg" },
@@ -139,14 +139,14 @@ export default function Home() {
                   variants={fadeInUp}
                   initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: i * 0.1 }}
                   key={i} 
-                  className="group relative h-[400px] rounded-3xl overflow-hidden cursor-pointer"
+                  className="group relative h-[320px] rounded-3xl overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-3 transition-all duration-500"
                 >
-                  <img src={project.img} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                  <div className="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <div className="w-10 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mb-4 rounded-full"></div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
-                    <p className="text-slate-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">{project.desc}</p>
+                  <img src={project.img} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-125" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/95 via-slate-900/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                  <div className="absolute bottom-0 left-0 p-6 w-full translate-y-6 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                    <div className="w-8 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mb-4 rounded-full group-hover:w-12 transition-all duration-500"></div>
+                    <h3 className="text-xl font-bold text-white mb-2 leading-tight">{project.title}</h3>
+                    <p className="text-slate-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-2">{project.desc}</p>
                   </div>
                 </motion.div>
               ))}
