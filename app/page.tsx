@@ -31,7 +31,7 @@ export default function Home() {
             initial={{ scale: 1.1, opacity: 0 }}
             animate={{ scale: 1, opacity: 0.15 }}
             transition={{ duration: 1.5, ease: "easeOut" }}
-            className="absolute inset-0 bg-[url('/hero-bg.jpg')] bg-cover bg-center bg-no-repeat"
+            className="absolute inset-0 bg-[url('/w5.jpg')] bg-cover bg-center bg-no-repeat"
           ></motion.div>
           {/* Refreshing Glassmorphism Gradients */}
           <div className="absolute inset-0 bg-gradient-to-br from-blue-50/90 via-slate-50/80 to-amber-50/90 backdrop-blur-[2px]"></div>
