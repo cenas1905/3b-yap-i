@@ -1,0 +1,20 @@
+{
+  "heroTitle": "Estetiği ve Güvenliği Camla Yeniden Tasarlıyoruz",
+  "heroSubtitle": "3B Yapı olarak, Winsa ve Royal Glass uzmanlığıyla yaşam alanlarınıza şıklık, yalıtım ve konfor katıyoruz.",
+  "aboutText": "Yılların verdiği tecrübe ve sektörün lider markalarıyla çalışmanın güvencesi. Her detayı kusursuz düşünülmüş mimari cam sistemleri.",
+  "services": [
+    {
+      "title": "Premium Cam Balkon",
+      "desc": "Dört mevsim kullanılabilen, üstün ısı ve ses yalıtımlı lüks cam balkon sistemleri."
+    },
+    {
+      "title": "Alüminyum Doğrama",
+      "desc": "Modern mimariyle uyumlu, dayanıklı ve uzun ömürlü alüminyum pencere & kapı çözümleri."
+    },
+    {
+      "title": "Mimari Cam Çözümleri",
+      "desc": "Ofis bölmeleri, kış bahçeleri ve özel tasarım cam uygulamaları ile mekanlarınıza değer katıyoruz."
+    }
+  ],
+  "contactMessages": []
+}

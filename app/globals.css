@@ -1,0 +1,148 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-geist-mono);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+}
+
+/* ─────────────────────────────────────────────
+   CEM-AS Alüminyum & Cam Sistemleri Design System
+   "Classic Corporate Red & Black" (cemasaluminyum.com)
+   ───────────────────────────────────────────── */
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  
+  --primary: #d21920; /* Vibrant Corporate Red */
+  --primary-foreground: #ffffff;
+  
+  --secondary: #1a1a1a; /* Charcoal Black */
+  --secondary-foreground: #ffffff;
+  
+  --muted: #f7f7f7;
+  --muted-foreground: #555555;
+  
+  --accent: #d21920;
+  --accent-foreground: #ffffff;
+  
+  --border: #e5e7eb;
+  --input: #f9fafb;
+  --ring: #d21920;
+  
+  --radius: 0.25rem;
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { 
+    @apply bg-background text-foreground; 
+    font-feature-settings: "rlig" 1, "calt" 1;
+    background-image: none; /* Clean solid background like the old site */
+  }
+  html { @apply font-sans; scroll-behavior: smooth; }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #ffffff; }
+  ::-webkit-scrollbar-thumb { background: #d21920; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #1a1a1a; }
+
+  ::selection { background: #d21920; color: #ffffff; }
+}
+
+/* ─── Premium Glassmorphic Elements ─── */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(210, 25, 32, 0.15);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.glass-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  background: #ffffff;
+  border-color: #d21920;
+  box-shadow: 0 8px 24px 0 rgba(210, 25, 32, 0.08);
+  transform: translateY(-2px);
+}
+
+/* ─── Technical specs layout ─── */
+.spec-row {
+  border-bottom: 1px solid #f3f4f6;
+  transition: all 0.2s ease;
+}
+.spec-row:hover {
+  background-color: rgba(210, 25, 32, 0.03);
+  padding-left: 6px;
+}
+.spec-row:last-child {
+  border-bottom: none;
+}
+
+/* ─── Image Placeholders ─── */
+.photo-placeholder {
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-placeholder::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+  transform: translateX(-100%);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+
+/* ─── Marquee Animations ─── */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes marquee2 {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0%); }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee2 {
+  animation: marquee2 25s linear infinite;
+}
