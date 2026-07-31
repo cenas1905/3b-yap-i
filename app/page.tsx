@@ -127,7 +127,7 @@ export default function Home() {
             </motion.div>
 
             <div 
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+              className="grid grid-cols-1 md:grid-cols-4 gap-6"
             >
               {[
                 { title: "Lüks Cam Balkon Sistemleri", desc: "Isıcamlı, katlanır ve sürme seriler ile dört mevsim konfor.", img: "/w1.jpg" },
