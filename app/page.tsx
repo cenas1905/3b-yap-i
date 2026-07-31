@@ -120,7 +120,7 @@ export default function Home() {
             </motion.div>
 
             {/* Specifically designed 4-column elegant grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
               {[
                 { title: "Lüks Cam Balkon", desc: "Dört mevsim konfor.", img: "/w1.jpg" },
                 { title: "Kış Bahçesi", desc: "Özel tasarım alüminyum.", img: "/w2.jpg" },
