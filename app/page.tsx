@@ -95,15 +95,18 @@ export default function Home() {
                 <motion.div 
                   key={i}
                   initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ delay: i * 0.2 }}
-                  className="group p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-300"
+                  className="group p-8 rounded-3xl bg-white shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-slate-100 hover:-translate-y-2 hover:shadow-[0_10px_40px_rgb(37,99,235,0.12)] hover:border-blue-100 transition-all duration-500 relative overflow-hidden"
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-50 flex items-center justify-center mb-6 text-blue-600 group-hover:scale-110 transition-transform">
+                  {/* Decorative Hover Glow */}
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-cyan-400/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center mb-6 text-white group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:scale-110 transition-all duration-300 shadow-lg">
                     <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-slate-900 group-hover:text-blue-600 transition-colors">{service.title}</h3>
-                  <p className="text-slate-600 leading-relaxed">{service.desc}</p>
+                  <h3 className="relative text-2xl font-bold mb-4 text-slate-900 group-hover:text-blue-600 transition-colors z-10">{service.title}</h3>
+                  <p className="relative text-slate-600 leading-relaxed z-10">{service.desc}</p>
                 </motion.div>
               ))}
             </div>

@@ -1,19 +1,19 @@
 {
-  "heroTitle": "Cam ve Aynanın Lüksle Buluştuğu Nokta",
-  "heroSubtitle": "3B Yapı olarak, özel tasarım dekoratif aynalar, kış bahçeleri ve premium cam sistemleriyle mekanlarınıza değer ve estetik katıyoruz.",
-  "aboutText": "Yılların verdiği tecrübe ve usta işçilikle; yaşam alanlarınızı sıradanlıktan çıkarıp, altın varaklı aynalar ve modern mimari cam çözümleriyle taçlandırıyoruz.",
+  "heroTitle": "Modern Mimarinin Şeffaf Yüzü",
+  "heroSubtitle": "Winsa ve Royal Glass güvencesiyle; kış bahçeleri, cam balkonlar ve alüminyum sistemleriyle mekanlarınıza yalıtım, güvenlik ve estetik katıyoruz.",
+  "aboutText": "Yılların tecrübesi ve uzman ekibimizle, yaşam alanlarınızı dış etkenlerden korurken, ferahlığı ve modern çizgileri evinizin içine taşıyoruz.",
   "services": [
     {
-      "title": "Klasik & Neo-Klasik Aynalar",
-      "desc": "Altın ve gümüş oymalı, mekanınıza saray esintisi katan özel tasarım klasik ayna işlemeleri."
-    },
-    {
-      "title": "Dekoratif Duvar & Boy Aynaları",
-      "desc": "Baklava dilimli, modern kesim ve aydınlatmalı boy aynaları ile mekanlarınızı genişletiyoruz."
-    },
-    {
       "title": "Lüks Cam Balkon Sistemleri",
-      "desc": "Dört mevsim konfor sunan, yüksek yalıtımlı ve estetik cam balkon & kış bahçesi tasarımları."
+      "desc": "Dört mevsim konfor sunan, yüksek yalıtımlı, estetik ısıcamlı sürme ve katlanır cam sistemleri."
+    },
+    {
+      "title": "Premium Kış Bahçeleri",
+      "desc": "Evinizin sınırlarını genişleten, özel yalıtımlı alüminyum çatı ve cephe sistemleriyle tasarlanmış yaşam alanları."
+    },
+    {
+      "title": "Alüminyum Doğrama & Cephe",
+      "desc": "Modern mimariye uygun, rüzgar ve ısı yalıtımında üst düzey performans gösteren dış cephe ve doğrama çözümleri."
     }
   ],
   "contactMessages": []
