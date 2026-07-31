@@ -160,7 +160,7 @@ export default function Home() {
               className="text-center mt-20"
             >
               <a href="https://www.instagram.com/winsa3byapi" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-slate-900 to-slate-800 hover:from-blue-600 hover:to-blue-700 text-white font-bold rounded-full transition-all shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-blue-500/30 hover:scale-105">
-                Tüm Projelerimiz İçin Instagram'ı Ziyaret Edin
+                Tüm Projelerimiz İçin Instagram&apos;ı Ziyaret Edin
               </a>
             </motion.div>
           </div>
