@@ -46,9 +46,6 @@ export default function Navbar() {
             <a href="#koleksiyon" className="text-slate-600 hover:text-slate-900 transition-colors">Koleksiyon</a>
             <a href="#projeler" className="text-slate-600 hover:text-slate-900 transition-colors">Projeler</a>
             <a href="#iletisim" className="text-slate-600 hover:text-slate-900 transition-colors">İletişim</a>
-            <Link href="/admin" className="px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-full transition-all shadow-md">
-              Giriş Yap
-            </Link>
           </div>
 
           {/* Mobile Toggle */}
