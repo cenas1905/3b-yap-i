@@ -39,16 +39,16 @@ export default function Home() {
           <div className="relative z-10 container mx-auto px-6 text-center max-w-5xl pt-32">
             <motion.div 
               initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }}
-              className="inline-block mb-6 px-6 py-2 rounded-full bg-white/60 backdrop-blur-md border border-white shadow-sm text-blue-600 font-bold tracking-widest uppercase text-sm"
+              className="inline-block mb-6 px-6 py-2 rounded-full bg-white/60 backdrop-blur-md border border-amber-200 shadow-sm text-amber-600 font-bold tracking-widest uppercase text-sm"
             >
-              Geleceğin Mimarisi
+              Lüks ve Zarafet
             </motion.div>
             <motion.h1 
               initial="hidden" animate="visible" variants={fadeInUp}
               className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-slate-800 mb-8 drop-shadow-sm leading-tight"
             >
               {siteData.heroTitle.split(' ').slice(0, -2).join(' ')} <br /> 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-amber-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-600 drop-shadow-sm">
                 {siteData.heroTitle.split(' ').slice(-2).join(' ')}
               </span>
             </motion.h1>
@@ -62,11 +62,11 @@ export default function Home() {
               initial="hidden" animate="visible" variants={fadeInUp} transition={{ delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
-              <a href="#projeler" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-bold rounded-full transition-all shadow-lg hover:shadow-blue-500/30 hover:scale-105">
-                Projelerimizi İnceleyin
+              <a href="#projeler" className="px-8 py-4 bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-yellow-500 hover:to-amber-400 text-white font-bold rounded-full transition-all shadow-lg hover:shadow-amber-500/30 hover:scale-105">
+                Koleksiyonu İnceleyin
               </a>
-              <a href="#iletisim" className="px-8 py-4 bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 font-bold rounded-full transition-all hover:scale-105 shadow-sm">
-                Ücretsiz Keşif İste
+              <a href="#iletisim" className="px-8 py-4 bg-white hover:bg-slate-100 border border-amber-200 text-slate-700 font-bold rounded-full transition-all hover:scale-105 shadow-sm">
+                Bize Ulaşın
               </a>
             </motion.div>
           </div>
@@ -177,8 +177,8 @@ export default function Home() {
               <p className="text-slate-600 text-lg">Özel tasarım ayna, dekorasyon ve detay işçiliklerimiz.</p>
             </motion.div>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-              {["/g1.jpg", "/g2.png", "/g3.jpg", "/g4.jpg", "/g5.jpg"].map((img, idx) => (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4">
+              {["/g1.jpg", "/g2.png", "/g3.jpg", "/g4.jpg", "/g5.jpg", "/g6.png", "/g7.jpg"].map((img, idx) => (
                 <motion.div 
                   key={idx}
                   initial={{ opacity: 0, scale: 0.9 }}

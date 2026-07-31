@@ -1,19 +1,19 @@
 {
-  "heroTitle": "Estetiği ve Güvenliği Camla Yeniden Tasarlıyoruz",
-  "heroSubtitle": "3B Yapı olarak, Winsa ve Royal Glass uzmanlığıyla yaşam alanlarınıza şıklık, yalıtım ve konfor katıyoruz.",
-  "aboutText": "Yılların verdiği tecrübe ve sektörün lider markalarıyla çalışmanın güvencesi. Her detayı kusursuz düşünülmüş mimari cam sistemleri.",
+  "heroTitle": "Cam ve Aynanın Lüksle Buluştuğu Nokta",
+  "heroSubtitle": "3B Yapı olarak, özel tasarım dekoratif aynalar, kış bahçeleri ve premium cam sistemleriyle mekanlarınıza değer ve estetik katıyoruz.",
+  "aboutText": "Yılların verdiği tecrübe ve usta işçilikle; yaşam alanlarınızı sıradanlıktan çıkarıp, altın varaklı aynalar ve modern mimari cam çözümleriyle taçlandırıyoruz.",
   "services": [
     {
-      "title": "Premium Cam Balkon",
-      "desc": "Dört mevsim kullanılabilen, üstün ısı ve ses yalıtımlı lüks cam balkon sistemleri."
+      "title": "Klasik & Neo-Klasik Aynalar",
+      "desc": "Altın ve gümüş oymalı, mekanınıza saray esintisi katan özel tasarım klasik ayna işlemeleri."
     },
     {
-      "title": "Alüminyum Doğrama",
-      "desc": "Modern mimariyle uyumlu, dayanıklı ve uzun ömürlü alüminyum pencere & kapı çözümleri."
+      "title": "Dekoratif Duvar & Boy Aynaları",
+      "desc": "Baklava dilimli, modern kesim ve aydınlatmalı boy aynaları ile mekanlarınızı genişletiyoruz."
     },
     {
-      "title": "Mimari Cam Çözümleri",
-      "desc": "Ofis bölmeleri, kış bahçeleri ve özel tasarım cam uygulamaları ile mekanlarınıza değer katıyoruz."
+      "title": "Lüks Cam Balkon Sistemleri",
+      "desc": "Dört mevsim konfor sunan, yüksek yalıtımlı ve estetik cam balkon & kış bahçesi tasarımları."
     }
   ],
   "contactMessages": []
