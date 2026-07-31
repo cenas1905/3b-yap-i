@@ -28,7 +28,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
             {/* Minimalist Logo Icon */}
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-amber-500/30 group-hover:scale-105 transition-transform">
+            <div className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-slate-500/30 group-hover:scale-105 transition-transform">
               3B
             </div>
             <span className="text-2xl font-display font-bold text-slate-800 tracking-tight">
@@ -37,10 +37,10 @@ export default function Navbar() {
           </Link>
 
           <div className="hidden md:flex items-center gap-8 text-sm font-medium">
-            <a href="#hizmetler" className="text-slate-600 hover:text-amber-600 transition-colors">Koleksiyon</a>
-            <a href="#hakkimizda" className="text-slate-600 hover:text-amber-600 transition-colors">Hakkımızda</a>
-            <a href="#iletisim" className="text-slate-600 hover:text-amber-600 transition-colors">İletişim</a>
-            <Link href="/admin" className="px-5 py-2.5 bg-slate-900 hover:bg-amber-600 text-white rounded-full transition-all shadow-md hover:shadow-amber-500/20">
+            <a href="#koleksiyon" className="text-slate-600 hover:text-slate-900 transition-colors">Koleksiyon</a>
+            <a href="#projeler" className="text-slate-600 hover:text-slate-900 transition-colors">Projeler</a>
+            <a href="#iletisim" className="text-slate-600 hover:text-slate-900 transition-colors">İletişim</a>
+            <Link href="/admin" className="px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-full transition-all shadow-md">
               Giriş Yap
             </Link>
           </div>
