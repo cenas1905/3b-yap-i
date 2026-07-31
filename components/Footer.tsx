@@ -16,10 +16,10 @@ export default function Footer() {
               Winsa ve Royal Glass güvencesiyle mekanlarınıza değer katan yenilikçi cam ve alüminyum çözümleri.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-amber-500 hover:text-white transition-all font-bold text-xs">
+              <a href="#" className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition-all font-bold text-xs">
                 IG
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-amber-500 hover:text-white transition-all font-bold text-xs">
+              <a href="#" className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition-all font-bold text-xs">
                 FB
               </a>
             </div>
@@ -31,7 +31,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-3">
               {['Ana Sayfa', 'Hakkımızda', 'Hizmetlerimiz', 'Projelerimiz'].map((item) => (
                 <li key={item}>
-                  <Link href="#" className="text-slate-600 text-sm hover:text-amber-500 transition-colors">
+                  <Link href="#" className="text-slate-600 text-sm hover:text-blue-600 transition-colors">
                     {item}
                   </Link>
                 </li>
@@ -44,16 +44,16 @@ export default function Footer() {
             <h4 className="text-slate-900 font-bold mb-6 tracking-wider uppercase text-sm">İletişim</h4>
             <ul className="flex flex-col gap-4">
               <li className="flex items-start gap-4 text-slate-600 text-sm">
-                <MapPin size={20} className="text-amber-500 shrink-0" />
+                <MapPin size={20} className="text-blue-600 shrink-0" />
                 <span>Örnek Mahallesi, Yapı Caddesi No: 123, Merkez / Şehir</span>
               </li>
               <li className="flex items-center gap-4 text-slate-600 text-sm">
-                <Phone size={20} className="text-amber-500 shrink-0" />
-                <a href="tel:+905555555555" className="hover:text-amber-500 transition-colors">+90 555 555 55 55</a>
+                <Phone size={20} className="text-blue-600 shrink-0" />
+                <a href="tel:+905555555555" className="hover:text-blue-600 transition-colors">+90 555 555 55 55</a>
               </li>
               <li className="flex items-center gap-4 text-slate-600 text-sm">
-                <Mail size={20} className="text-amber-500 shrink-0" />
-                <a href="mailto:info@3byapi.com" className="hover:text-amber-500 transition-colors">info@3byapi.com</a>
+                <Mail size={20} className="text-blue-600 shrink-0" />
+                <a href="mailto:info@3byapi.com" className="hover:text-blue-600 transition-colors">info@3byapi.com</a>
               </li>
             </ul>
           </div>
@@ -64,8 +64,8 @@ export default function Footer() {
             © {new Date().getFullYear()} 3B Yapı. Tüm hakları saklıdır.
           </p>
           <div className="flex gap-6 text-xs text-slate-500">
-            <Link href="/admin" className="hover:text-amber-500 transition-colors">Admin Paneli</Link>
-            <Link href="#" className="hover:text-amber-500 transition-colors">Gizlilik Politikası</Link>
+            <Link href="/admin" className="hover:text-blue-600 transition-colors">Admin Paneli</Link>
+            <Link href="#" className="hover:text-blue-600 transition-colors">Gizlilik Politikası</Link>
           </div>
         </div>
       </div>

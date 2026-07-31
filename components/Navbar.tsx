@@ -41,14 +41,14 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className={`text-sm uppercase tracking-wider font-bold transition-colors ${isScrolled ? 'text-slate-600 hover:text-amber-500' : 'text-slate-800 hover:text-amber-600 drop-shadow-sm'}`}
+              className={`text-sm uppercase tracking-wider font-bold transition-colors ${isScrolled ? 'text-slate-600 hover:text-blue-600' : 'text-slate-800 hover:text-blue-700 drop-shadow-sm'}`}
             >
               {link.name}
             </Link>
           ))}
           <a
             href="tel:+905555555555"
-            className="px-6 py-2.5 bg-amber-500 hover:bg-amber-600 text-white rounded-full text-sm font-bold transition-all hover:scale-105 shadow-md"
+            className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white rounded-full text-sm font-bold transition-all hover:scale-105 shadow-md shadow-blue-500/20"
           >
             Bizi Arayın
           </a>
@@ -70,7 +70,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-lg font-bold text-slate-800 hover:text-amber-500"
+              className="text-lg font-bold text-slate-800 hover:text-blue-600 transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}

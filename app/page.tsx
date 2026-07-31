@@ -28,33 +28,40 @@ export default function Home() {
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-50">
           <motion.div 
             initial={{ scale: 1.1, opacity: 0 }}
-            animate={{ scale: 1, opacity: 0.2 }}
+            animate={{ scale: 1, opacity: 0.15 }}
             transition={{ duration: 1.5, ease: "easeOut" }}
             className="absolute inset-0 bg-[url('/hero-bg.jpg')] bg-cover bg-center bg-no-repeat"
           ></motion.div>
-          <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-slate-50/80 to-slate-50"></div>
+          {/* Refreshing Glassmorphism Gradients */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-50/90 via-slate-50/80 to-amber-50/90 backdrop-blur-[2px]"></div>
           
-          <div className="relative z-10 container mx-auto px-6 text-center max-w-4xl pt-32">
+          <div className="relative z-10 container mx-auto px-6 text-center max-w-5xl pt-32">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }}
+              className="inline-block mb-6 px-6 py-2 rounded-full bg-white/60 backdrop-blur-md border border-white shadow-sm text-blue-600 font-bold tracking-widest uppercase text-sm"
+            >
+              Geleceğin Mimarisi
+            </motion.div>
             <motion.h1 
               initial="hidden" animate="visible" variants={fadeInUp}
-              className="font-display text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-6 drop-shadow-sm"
+              className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-slate-800 mb-8 drop-shadow-sm leading-tight"
             >
-              Estetiği ve Güvenliği <br /> <span className="text-amber-500">Camla Yeniden Tasarlıyoruz</span>
+              Yaşam Alanlarınızı <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-amber-500">Işıkla Buluşturun</span>
             </motion.h1>
             <motion.p 
               initial="hidden" animate="visible" variants={fadeInUp} transition={{ delay: 0.2 }}
               className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto font-medium leading-relaxed"
             >
-              3B Yapı olarak, Winsa ve Royal Glass uzmanlığıyla yaşam alanlarınıza şıklık, yalıtım ve konfor katıyoruz.
+              3B Yapı olarak, Winsa ve Royal Glass kalitesini estetikle harmanlıyor; evlerinize ferahlık, yalıtım ve huzur katıyoruz.
             </motion.p>
             <motion.div 
               initial="hidden" animate="visible" variants={fadeInUp} transition={{ delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
-              <a href="#projeler" className="px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-full transition-all shadow-[0_4px_20px_rgba(245,158,11,0.3)] hover:scale-105">
+              <a href="#projeler" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-bold rounded-full transition-all shadow-lg hover:shadow-blue-500/30 hover:scale-105">
                 Projelerimizi İnceleyin
               </a>
-              <a href="#iletisim" className="px-8 py-4 bg-white hover:bg-slate-100 border border-slate-200 text-slate-800 font-bold rounded-full transition-all hover:scale-105 shadow-sm">
+              <a href="#iletisim" className="px-8 py-4 bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 font-bold rounded-full transition-all hover:scale-105 shadow-sm">
                 Ücretsiz Keşif İste
               </a>
             </motion.div>
@@ -73,14 +80,17 @@ export default function Home() {
         </motion.div>
 
         {/* Services / About */}
-        <section className="py-24 bg-slate-50">
-          <div className="container mx-auto px-6">
+        <section className="relative py-32 bg-white overflow-hidden">
+          <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-50/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-amber-50/50 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3"></div>
+          
+          <div className="relative container mx-auto px-6 z-10">
             <motion.div 
               initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}
-              className="text-center max-w-3xl mx-auto mb-16"
+              className="text-center max-w-3xl mx-auto mb-20"
             >
-              <h2 className="font-display text-3xl md:text-5xl font-bold mb-6 text-slate-900">Neden 3B Yapı?</h2>
-              <p className="text-slate-600 text-lg">Yılların verdiği tecrübe ve sektörün lider markalarıyla çalışmanın güvencesi. Her detayı kusursuz düşünülmüş mimari cam sistemleri.</p>
+              <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-slate-900">Neden <span className="text-blue-600">3B Yapı?</span></h2>
+              <p className="text-slate-600 text-lg">Yılların verdiği tecrübe, sektörün lider markaları ve her detayı kusursuz düşünülmüş mimari cam sistemleriyle fark yaratıyoruz.</p>
             </motion.div>
             <motion.div 
               variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}
@@ -95,10 +105,11 @@ export default function Home() {
                 <motion.div 
                   variants={fadeInUp}
                   key={i} 
-                  className="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-amber-400/50 transition-all duration-300 group cursor-default"
+                  className="p-10 rounded-[2rem] bg-white/80 backdrop-blur-md border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_40px_rgb(37,99,235,0.08)] hover:-translate-y-2 hover:border-blue-100 transition-all duration-500 group cursor-default relative overflow-hidden"
                 >
-                  <h3 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-amber-500 transition-colors">{service.title}</h3>
-                  <p className="text-slate-600 leading-relaxed">{service.desc}</p>
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-100 to-amber-100 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <h3 className="relative text-2xl font-bold text-slate-800 mb-4 group-hover:text-blue-600 transition-colors z-10">{service.title}</h3>
+                  <p className="relative text-slate-600 leading-relaxed z-10">{service.desc}</p>
                 </motion.div>
               ))}
             </motion.div>
@@ -106,13 +117,15 @@ export default function Home() {
         </section>
 
         {/* Projects */}
-        <section id="projeler" className="py-24 bg-white border-t border-slate-200 overflow-hidden">
-          <div className="container mx-auto px-6">
+        <section id="projeler" className="py-32 bg-slate-50 border-t border-slate-200/60 overflow-hidden relative">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-blue-50/40 via-transparent to-transparent"></div>
+          
+          <div className="container relative z-10 mx-auto px-6">
             <motion.div 
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
-              className="text-center max-w-3xl mx-auto mb-16"
+              className="text-center max-w-3xl mx-auto mb-20"
             >
-              <h2 className="font-display text-3xl md:text-5xl font-bold mb-6 text-slate-900">Referans Projelerimiz</h2>
+              <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-slate-900">Referans Projelerimiz</h2>
               <p className="text-slate-600 text-lg">Winsa ve Royal Glass kalitesiyle tamamladığımız, modern mimariyle uyumlu lüks çalışmalarımız.</p>
             </motion.div>
             
@@ -129,14 +142,14 @@ export default function Home() {
                 <motion.div 
                   variants={fadeInUp}
                   key={i} 
-                  className="group relative h-[400px] overflow-hidden rounded-2xl bg-slate-100 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer"
+                  className="group relative h-[450px] overflow-hidden rounded-[2rem] bg-slate-200 shadow-lg hover:shadow-2xl hover:shadow-blue-900/20 transition-all duration-700 cursor-pointer"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-80 z-10 transition-opacity duration-500 group-hover:opacity-90"></div>
-                  <img src={project.img} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                  <div className="absolute bottom-8 left-8 right-8 z-20">
-                    <div className="w-12 h-1 bg-amber-500 mb-4 transform origin-left group-hover:scale-x-150 transition-transform duration-500"></div>
-                    <h4 className="text-white font-display text-2xl font-bold mb-2 shadow-sm">{project.title}</h4>
-                    <p className="text-slate-200 text-sm opacity-0 -translate-y-4 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">{project.desc}</p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/30 to-transparent opacity-60 z-10 transition-opacity duration-700 group-hover:opacity-80"></div>
+                  <img src={project.img} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out" />
+                  <div className="absolute bottom-10 left-10 right-10 z-20">
+                    <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-amber-500 mb-6 transform origin-left group-hover:scale-x-150 transition-transform duration-700 ease-out"></div>
+                    <h4 className="text-white font-display text-3xl font-bold mb-3 shadow-sm tracking-wide">{project.title}</h4>
+                    <p className="text-blue-100/90 text-sm opacity-0 -translate-y-4 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 font-medium tracking-wide">{project.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -144,9 +157,9 @@ export default function Home() {
             
             <motion.div 
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.5 }}
-              className="text-center mt-16"
+              className="text-center mt-20"
             >
-              <a href="https://www.instagram.com/winsa3byapi" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-full transition-all shadow-[0_4px_20px_rgba(245,158,11,0.3)] hover:scale-110 hover:-translate-y-1">
+              <a href="https://www.instagram.com/winsa3byapi" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-slate-900 to-slate-800 hover:from-blue-600 hover:to-blue-700 text-white font-bold rounded-full transition-all shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-blue-500/30 hover:scale-105">
                 Tüm Projelerimiz İçin Instagram'ı Ziyaret Edin
               </a>
             </motion.div>
