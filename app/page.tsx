@@ -34,12 +34,12 @@ export default function Home() {
             className="absolute inset-0 bg-[url('/w5.jpg')] bg-cover bg-center bg-no-repeat"
           ></motion.div>
           {/* Refreshing Glassmorphism Gradients */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-50/90 via-slate-50/80 to-amber-50/90 backdrop-blur-[2px]"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-50/90 via-slate-50/80 to-blue-100/90 backdrop-blur-[2px]"></div>
           
           <div className="relative z-10 container mx-auto px-6 text-center max-w-5xl pt-32">
             <motion.div 
               initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }}
-              className="inline-block mb-6 px-6 py-2 rounded-full bg-white/60 backdrop-blur-md border border-amber-200 shadow-sm text-amber-600 font-bold tracking-widest uppercase text-sm"
+              className="inline-block mb-6 px-6 py-2 rounded-full bg-white/60 backdrop-blur-md border border-blue-200 shadow-sm text-blue-600 font-bold tracking-widest uppercase text-sm"
             >
               Lüks ve Zarafet
             </motion.div>
@@ -48,7 +48,7 @@ export default function Home() {
               className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-slate-800 mb-8 drop-shadow-sm leading-tight"
             >
               {siteData.heroTitle.split(' ').slice(0, -2).join(' ')} <br /> 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-600 drop-shadow-sm">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 drop-shadow-sm">
                 {siteData.heroTitle.split(' ').slice(-2).join(' ')}
               </span>
             </motion.h1>
@@ -59,24 +59,14 @@ export default function Home() {
               {siteData.heroSubtitle}
             </motion.p>
             
-            {/* Logos */}
-            <motion.div 
-              initial="hidden" animate="visible" variants={fadeInUp} transition={{ delay: 0.3 }}
-              className="flex justify-center items-center gap-8 mb-10 opacity-70"
-            >
-              <div className="text-2xl font-bold text-slate-800 tracking-tighter">Winsa</div>
-              <div className="w-1.5 h-1.5 rounded-full bg-slate-400"></div>
-              <div className="text-2xl font-bold text-slate-800 tracking-tighter">Royal Glass</div>
-            </motion.div>
-
             <motion.div 
               initial="hidden" animate="visible" variants={fadeInUp} transition={{ delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
-              <a href="#koleksiyon" className="px-8 py-4 bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-yellow-500 hover:to-amber-400 text-white font-bold rounded-full transition-all shadow-lg hover:shadow-amber-500/30 hover:scale-105">
+              <a href="#koleksiyon" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-cyan-500 hover:to-blue-400 text-white font-bold rounded-full transition-all shadow-lg hover:shadow-blue-500/30 hover:scale-105">
                 Koleksiyonu İnceleyin
               </a>
-              <a href="tel:05442201740" className="px-8 py-4 bg-white hover:bg-slate-100 border border-amber-200 text-slate-700 font-bold rounded-full transition-all hover:scale-105 shadow-sm flex items-center gap-2">
+              <a href="tel:05442201740" className="px-8 py-4 bg-white hover:bg-slate-100 border border-blue-200 text-slate-700 font-bold rounded-full transition-all hover:scale-105 shadow-sm flex items-center gap-2">
                 <span>0544 220 17 40</span>
               </a>
             </motion.div>
@@ -101,12 +91,12 @@ export default function Home() {
                   initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ delay: i * 0.2 }}
                   className="group p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-300"
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-100 to-amber-50 flex items-center justify-center mb-6 text-amber-600 group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-50 flex items-center justify-center mb-6 text-blue-600 group-hover:scale-110 transition-transform">
                     <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-slate-900 group-hover:text-amber-600 transition-colors">{service.title}</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-slate-900 group-hover:text-blue-600 transition-colors">{service.title}</h3>
                   <p className="text-slate-600 leading-relaxed">{service.desc}</p>
                 </motion.div>
               ))}
@@ -145,7 +135,7 @@ export default function Home() {
                   <img src={project.img} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
                   <div className="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <div className="w-10 h-1 bg-gradient-to-r from-amber-400 to-amber-600 mb-4 rounded-full"></div>
+                    <div className="w-10 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mb-4 rounded-full"></div>
                     <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
                     <p className="text-slate-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">{project.desc}</p>
                   </div>
@@ -157,7 +147,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.5 }}
               className="text-center mt-20"
             >
-              <a href="https://www.instagram.com/winsa3byapi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-slate-900 to-slate-800 hover:from-amber-600 hover:to-yellow-500 text-white font-bold rounded-full transition-all shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-amber-500/30 hover:scale-105">
+              <a href="https://www.instagram.com/winsa3byapi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-slate-900 to-slate-800 hover:from-blue-600 hover:to-cyan-500 text-white font-bold rounded-full transition-all shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-blue-500/30 hover:scale-105">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                 Tüm Projelerimiz İçin Instagram&apos;ı Ziyaret Edin
               </a>

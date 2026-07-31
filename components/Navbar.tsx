@@ -26,14 +26,20 @@ export default function Navbar() {
     <nav className="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm border-b border-amber-100">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 group">
-            {/* Minimalist Logo Icon */}
-            <div className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-slate-500/30 group-hover:scale-105 transition-transform">
-              3B
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="flex items-center gap-2">
+              <div className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-slate-500/30 group-hover:scale-105 transition-transform">
+                3B
+              </div>
+              <span className="text-2xl font-display font-bold text-slate-800 tracking-tight">
+                Yapı
+              </span>
             </div>
-            <span className="text-2xl font-display font-bold text-slate-800 tracking-tight">
-              Yapı
-            </span>
+            <div className="hidden sm:flex items-center gap-3 pl-3 border-l-2 border-slate-200">
+              <span className="text-sm font-bold text-slate-500 tracking-widest uppercase">Winsa</span>
+              <span className="w-1 h-1 rounded-full bg-slate-300"></span>
+              <span className="text-sm font-bold text-slate-500 tracking-widest uppercase">Royal Glass</span>
+            </div>
           </Link>
 
           <div className="hidden md:flex items-center gap-8 text-sm font-medium">
