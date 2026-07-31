@@ -63,33 +63,32 @@ export default function Home() {
         <section id="projeler" className="py-24 bg-neutral-900 border-t border-white/5">
           <div className="container mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="font-display text-3xl md:text-5xl font-bold mb-6 text-white">Öne Çıkan Projelerimiz</h2>
-              <p className="text-neutral-400">Winsa ve Royal Glass ile tamamladığımız, kalite ve estetiğin buluştuğu referans çalışmalarımız.</p>
+              <h2 className="font-display text-3xl md:text-5xl font-bold mb-6 text-white">Referans Projelerimiz</h2>
+              <p className="text-neutral-400 text-lg">Winsa ve Royal Glass kalitesiyle tamamladığımız, modern mimariyle uyumlu lüks çalışmalarımız.</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
-                "WhatsApp Image 2026-07-31 at 12.42.08.jpeg",
-                "WhatsApp Image 2026-07-31 at 12.42.09 (1).jpeg",
-                "WhatsApp Image 2026-07-31 at 12.42.09 (2).jpeg",
-                "WhatsApp Image 2026-07-31 at 12.42.09 (3).jpeg",
-                "WhatsApp Image 2026-07-31 at 12.42.09 (4).jpeg",
-                "WhatsApp Image 2026-07-31 at 12.42.09.jpeg"
-              ].map((img, i) => (
-                <div key={i} className="group relative aspect-square overflow-hidden rounded-2xl bg-neutral-950">
-                  <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10"></div>
-                  <img src={`/projects/${img}`} alt="3B Yapı Proje" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                  <div className="absolute bottom-6 left-6 right-6 z-20 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                    <h4 className="text-white font-bold text-lg">Winsa Sistemleri</h4>
-                    <p className="text-amber-400 text-sm">3B Yapı Güvencesiyle</p>
+                { title: "Lüks Cam Balkon Sistemleri", desc: "Isıcamlı, katlanır ve sürme seriler ile dört mevsim konfor.", img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1600" },
+                { title: "Kış Bahçesi Projeleri", desc: "Özel tasarım alüminyum profiller ve dayanıklı tavan camlarıyla kış bahçeleri.", img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1600" },
+                { title: "Alüminyum Doğrama & Cephe", desc: "Modern binalar için yalıtımlı, estetik ve rüzgara dayanıklı dış cephe çözümleri.", img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600" },
+                { title: "Minimalist İç Mekan Camları", desc: "Ofis bölme sistemleri, dekoratif cam kapılar ve modern duşakabinler.", img: "https://images.unsplash.com/photo-1600566753086-00f18efc2291?auto=format&fit=crop&q=80&w=1600" }
+              ].map((project, i) => (
+                <div key={i} className="group relative h-[400px] overflow-hidden rounded-2xl bg-neutral-950 shadow-2xl">
+                  <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-transparent opacity-80 z-10"></div>
+                  <img src={project.img} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 group-hover:opacity-60 transition-all duration-700" />
+                  <div className="absolute bottom-8 left-8 right-8 z-20">
+                    <div className="w-12 h-1 bg-amber-500 mb-4 transform origin-left group-hover:scale-x-150 transition-transform duration-500"></div>
+                    <h4 className="text-white font-display text-2xl font-bold mb-2">{project.title}</h4>
+                    <p className="text-neutral-300 text-sm opacity-0 -translate-y-4 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">{project.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
             
-            <div className="text-center mt-12">
-              <a href="https://www.instagram.com/winsa3byapi" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium rounded-full transition-all">
-                Daha Fazlası İçin Instagram'ı Ziyaret Edin
+            <div className="text-center mt-16">
+              <a href="https://www.instagram.com/winsa3byapi" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-8 py-4 bg-amber-500 hover:bg-amber-600 text-neutral-950 font-bold rounded-full transition-all shadow-[0_0_20px_rgba(245,158,11,0.2)] hover:scale-105">
+                Tüm Projelerimiz İçin Instagram'ı Ziyaret Edin
               </a>
             </div>
           </div>
