@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import siteData from "../data.json";
 
 export default function Home() {
   const fadeInUp = {
@@ -46,13 +47,16 @@ export default function Home() {
               initial="hidden" animate="visible" variants={fadeInUp}
               className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-slate-800 mb-8 drop-shadow-sm leading-tight"
             >
-              Yaşam Alanlarınızı <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-amber-500">Işıkla Buluşturun</span>
+              {siteData.heroTitle.split(' ').slice(0, -2).join(' ')} <br /> 
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-amber-500">
+                {siteData.heroTitle.split(' ').slice(-2).join(' ')}
+              </span>
             </motion.h1>
             <motion.p 
               initial="hidden" animate="visible" variants={fadeInUp} transition={{ delay: 0.2 }}
               className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto font-medium leading-relaxed"
             >
-              3B Yapı olarak, Winsa ve Royal Glass kalitesini estetikle harmanlıyor; evlerinize ferahlık, yalıtım ve huzur katıyoruz.
+              {siteData.heroSubtitle}
             </motion.p>
             <motion.div 
               initial="hidden" animate="visible" variants={fadeInUp} transition={{ delay: 0.4 }}
@@ -90,18 +94,14 @@ export default function Home() {
               className="text-center max-w-3xl mx-auto mb-20"
             >
               <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-slate-900">Neden <span className="text-blue-600">3B Yapı?</span></h2>
-              <p className="text-slate-600 text-lg">Yılların verdiği tecrübe, sektörün lider markaları ve her detayı kusursuz düşünülmüş mimari cam sistemleriyle fark yaratıyoruz.</p>
+              <p className="text-slate-600 text-lg">{siteData.aboutText || "Yılların verdiği tecrübe, sektörün lider markaları ve her detayı kusursuz düşünülmüş mimari cam sistemleriyle fark yaratıyoruz."}</p>
             </motion.div>
             <motion.div 
               variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}
               className="grid md:grid-cols-3 gap-8"
             >
               {/* Service Cards */}
-              {[
-                { title: "Premium Cam Balkon", desc: "Dört mevsim kullanılabilen, üstün ısı ve ses yalıtımlı lüks cam balkon sistemleri." },
-                { title: "Alüminyum Doğrama", desc: "Modern mimariyle uyumlu, dayanıklı ve uzun ömürlü alüminyum pencere & kapı çözümleri." },
-                { title: "Mimari Cam Çözümleri", desc: "Ofis bölmeleri, kış bahçeleri ve özel tasarım cam uygulamaları ile mekanlarınıza değer katıyoruz." }
-              ].map((service, i) => (
+              {siteData.services.map((service: any, i: number) => (
                 <motion.div 
                   variants={fadeInUp}
                   key={i} 
