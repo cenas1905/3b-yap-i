@@ -15,6 +15,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.3b-yapi.com.tr"),
   title: "3B Yapı - Profesyonel Cam ve Alüminyum Sistemleri",
   description: "Winsa ve Royal Glass güvencesiyle cam balkon, alüminyum ve mimari cam sistemleri. 3B Yapı ile modern mekanlar.",
 };

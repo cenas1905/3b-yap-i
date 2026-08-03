@@ -33,7 +33,7 @@ export default function AutomaticDoorsPage() {
     {
       title: 'Çift Kanatlı Otomatik Geçiş Sistemleri',
       desc: 'İş merkezleri, marketler ve yoğun yaya trafiğine sahip binalar için radar sensörlü, çift kanatlı açılır otomatik kapılar.',
-      img: 'https://cemasaluminyum.com/img/fotosel.jpg',
+      img: '/images/fotosel.jpg',
     },
     {
       title: 'Tek Kanatlı Fotoselli Kapılar',
@@ -101,7 +101,7 @@ export default function AutomaticDoorsPage() {
           >
             <div className="w-full h-full relative overflow-hidden rounded">
               <img
-                src="https://cemasaluminyum.com/img/fotosel.jpg"
+                src="/images/fotosel.jpg"
                 alt="Fotoselli otomatik cam kapı"
                 className="w-full h-full object-cover"
               />

@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://www.cemasaluminyum.com.tr/sitemap.xml',
+    sitemap: 'https://www.3b-yapi.com.tr/sitemap.xml',
   }
 }

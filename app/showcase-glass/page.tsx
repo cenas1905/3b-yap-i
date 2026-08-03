@@ -33,7 +33,7 @@ export default function ShowcaseGlassPage() {
     {
       title: 'Mağaza Vitrin & Camekan Sistemleri',
       desc: 'İş yerleri, mağazalar ve showroomlar için tasarlanmış geniş görüş alanına sahip dayanıklı, geniş camlı vitrin camekan çözümleri.',
-      img: 'https://cemasaluminyum.com/img/camekan.jpg',
+      img: '/images/camekan.jpg',
     },
     {
       title: 'Isı Yalıtımlı Alüminyum Doğramalar',
@@ -101,7 +101,7 @@ export default function ShowcaseGlassPage() {
           >
             <div className="w-full h-full relative overflow-hidden rounded">
               <img
-                src="https://cemasaluminyum.com/img/camekan.jpg"
+                src="/images/camekan.jpg"
                 alt="Mağaza vitrini alüminyum camekan"
                 className="w-full h-full object-cover"
               />

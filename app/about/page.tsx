@@ -80,7 +80,7 @@ export default function AboutPage() {
           {/* Image side */}
           <div className="lg:col-span-6 h-[450px] bg-white border border-[#dcdde2]/60 p-4 rounded shadow-sm relative overflow-hidden">
             <img
-              src="https://cemasaluminyum.com/resimler/806817-slider2.jpg"
+              src="/images/slider2.jpg"
               alt="CEM-AS Alüminyum Üretim ve Montaj"
               className="w-full h-full object-cover rounded"
             />
@@ -120,7 +120,7 @@ export default function AboutPage() {
         <section className="py-16 border-t border-[#dcdde2]/40 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 order-last lg:order-first h-[400px] bg-white border border-[#dcdde2]/60 p-4 rounded shadow-sm">
             <img
-              src="https://cemasaluminyum.com/resimler/615317-slider1.jpg"
+              src="/images/slider1.jpg"
               alt="Hassas Cam Balkon Profil Kesimi"
               className="w-full h-full object-cover rounded"
             />

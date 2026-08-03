@@ -33,7 +33,7 @@ export default function ShuttersPage() {
     {
       title: 'Poliüretan Dolgulu Alüminyum Kepenk',
       desc: 'Isı ve ses yalıtımı sağlayan, hafifliği sayesinde motoru yormayan ve sessiz çalışan dükkan/garaj kapıları.',
-      img: 'https://cemasaluminyum.com/img/kepenk.jpg',
+      img: '/images/kepenk.jpg',
     },
     {
       title: 'Poliüretan Dolgulu Çelik Kepenk',
@@ -101,7 +101,7 @@ export default function ShuttersPage() {
           >
             <div className="w-full h-full relative overflow-hidden rounded">
               <img
-                src="https://cemasaluminyum.com/img/kepenk.jpg"
+                src="/images/kepenk.jpg"
                 alt="Otomatik kepenk garaj kapısı"
                 className="w-full h-full object-cover"
               />
